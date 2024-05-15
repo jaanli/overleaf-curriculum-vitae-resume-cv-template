@@ -49,7 +49,7 @@ The patterns used here are mainly derived from:
 
 ## TODO
 
-* Redo in Typst: https://typst.app/
+* Redo in Typst: https://typst.app/ with this starter template: https://github.com/onefact/datathinking.org-report-template
 * Make more fun: https://www.horse-news.org/2018/08/where-are-they-now-my-little-resume.html
 
 <!--
