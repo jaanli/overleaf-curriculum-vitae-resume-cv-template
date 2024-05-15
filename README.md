@@ -51,6 +51,11 @@ The patterns used here are mainly derived from:
 
 * Redo in Typst: https://typst.app/ with this starter template: https://github.com/onefact/datathinking.org-report-template
 * Make more fun: https://www.horse-news.org/2018/08/where-are-they-now-my-little-resume.html
+* 
+
+## Getting help & contributing
+
+Pull requests welcome! Make sure to ask claude.ai and chat.openai.com (pro version for both, or the free 3 months trial of https://gemini.google.com/) for help to input your information. Just copy and paste all of the text and ask it to proceed step-by-step, and file an issue here if it's hard to fill out your details!
 
 <!--
 ### Todo
