@@ -2,7 +2,7 @@
 
 https://jaan.io/cv -
 
-<img width="981" alt="image" src="https://github.com/jaanli/overleaf-curriculum-vitae-resume-cv-template/assets/5317244/ce2a618a-1fec-4f0c-a254-9063da1d3ffb">
+<img width="1015" alt="image" src="https://github.com/jaanli/overleaf-curriculum-vitae-resume-cv-template/assets/5317244/cc45e695-4ed1-44d8-8d52-652b1ba4f24f">
 
 # Instructions for use with Overleaf
 
