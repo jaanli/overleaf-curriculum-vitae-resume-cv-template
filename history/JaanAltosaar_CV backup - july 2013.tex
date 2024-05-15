@@ -1,0 +1,224 @@
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, letterpaper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{letterpaper, textwidth=6.5in, textheight=9in, marginparsep=20pt, marginparwidth=2in}
+\setlength\parindent{0in}
+
+\oddsidemargin .5in
+\evensidemargin .5in
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{ %
+\fancyhf{} % remove everything
+\renewcommand{\headrulewidth}{0pt}} % remove lines as well
+\pagestyle{plain}
+\lfoot{\hspace{2.71in}\thepage}
+
+
+
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text,Scale=1.1}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+\usepackage{marvosym}
+
+\newfontfamily\times[Ligatures=TeX]{Times New Roman}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\normalsize #1}}
+\renewcommand*{\raggedrightmarginnote}{}
+\setlength{\marginparsep}{15pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+\usepackage[compact]{titlesec}
+\titlespacing*{\section}{0pt}{12pt}{3pt}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR \usepackage[dvipdfm, ] was removed
+\usepackage[bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Jaan Altosaar - Curriculum Vitæ},
+	pdfauthor={Jaan Altosaar, http://jaanaltosaar.com}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Jaan Altosaar --- Curriculum Vitæ}\\[0.3cm]
+
+\begin{minipage}[ht]{0.6\textwidth}
+\textsc{Department of Physics, McGill University}\\
+3600 Rue University, Montreal, Quebec\\
+\textsc{h3a 2t8}, Canada\\
+\end{minipage}
+\begin{minipage}[ht]{0.48\textwidth}
+\textsc{\Telefon} \hspace{3 mm} +1 (438) 402-9580\\
+\textsc{\Letter} \hspace{3 mm} altosaar@princeton.edu\\
+\textsc{\Mundus} \hspace{3 mm} \href{http://jaanaltosaar.com}{http://jaanaltosaar.com}\\ 
+\end{minipage}\\
+
+Born:  March 8, 1992---Ottawa, Canada\\
+Citizenship: Canadian and Estonian
+
+\section*{Areas of Specialization}
+Biophysics • Condensed Matter Physics
+
+\section*{Education}
+\years{2009-2013}\textbf{\textsc{B.Sc.} Joint Honours, Mathematics and Physics}\\
+\emph{McGill University}, Montreal, Quebec.\\
+\emph{Dean's Honour List, Dean's Multidisciplinary Undergraduate Research List}\\
+\years{2007-2009}\textbf{Ontario Secondary School Diploma}\\
+\emph{Hillcrest High School}, Ottawa, Ontario. Honours, Co-President of 1200-student body\\
+\years{2006-2007}\textbf{Higher School Certificate Years 9 \& 10}\\
+\emph{Randwick Boys High School}, Sydney, Australia
+
+\section*{Honours \& Awards}
+\years{2013-2014}Julie Payette NSERC Research Scholarship: awarded to the top 24 applicants in the Canada-wide Postgraduate Scholarships M competition (Ottawa, \$25,000)\\
+\years{2013}The Delta Upsilon Memorial Scholarship, McGill University (Montreal, \$5,000)\\
+\years{2013}The Faculty of Science Moyse Travelling Scholarship, McGill University (Montreal, \$8,800)\\
+\years{2013-2016}Commonwealth Scholarship for DPhil studies at University of Oxford (Oxford, £31,875/year)\\
+\years{2013}Delta Upsilon Graduate Scholarship, McGill University (Montreal, \$5,000)\\
+\years{2013}Full funding to attend the King Abdullah University of Science and Technology WEP Conference: international competition, 15 recipients (Jeddah, \textsc{\$}2000)\\
+\years{2012}First Prize for best poster, Canadian Undergraduate Physics Conference (Vancouver)\\
+\years{2012}Elected to Sigma Xi Society (Montreal)\\
+\years{2012}Second Prize, McGill Faculty-wide Undergraduate Research Conference (Montreal, \$150)\\
+\years{2012}Third Prize, McGill Department of Physics Poster Conference (Montreal)\\
+\years{2012}NSERC Undergraduate Student Research Award (Waterloo, \textsc{\$}8,400) \\
+\years{2011}McGill Award for Canadian Undergraduate Physics Conference (Saskatoon, \textsc{\$}1,000)\\
+\years{2011}NSERC Undergraduate Student Research Award (Montreal, \textsc{\$}7,600) \\
+\years{2010}Estonian Foundation of Canada Scholarship (Toronto, \textsc{\$}2,000)\\
+\years{2010}NSERC Undergraduate Student Research Award (Montreal, \textsc{\$}5,500)\\
+\years{2009}Annette S. Hill McGill Scholarship and Bursary (Montreal, \textsc{\$}5,000)\\
+\years{2008}Harry Elton Memorial Award (Shanghai, China, \textsc{\$}2,000)\\
+\years{2006}Bronze Medal in Biotechnology, Canada Wide Science Fair (Saguenay, \textsc{\$}300)\\
+\years{2005}First Prize in Biotechnology, Ottawa Regional Science Fair (Ottawa, \$50)
+
+\section*{Research Experience}
+\noindent
+\years{9/2012-present}\textbf{Supervisors: Professor Jürgen Sygusch \& Professor Anmar Khadra}\\
+\emph{\textbf{Université de Montréal}, Department of Biochemistry}\\
+\emph{\textbf{McGill University}, Department of Mathematics and Statistics, Honours Research Project}\\
+Theoretical biophysics: developing a physical foundation for the Resonant Recognition Model as a viable theory of biomolecular recognition via transition dipole coupling. Computational predictions of active sites of uncharacterized human genes. This project received full funding for the KAUST 2013 Undergraduate Poster Competition.\\  
+
+\years{5/2012-8/2012}\textbf{Supervisor: Professor Michel Gingras}\\ 
+\emph{\textbf{University of Waterloo}, Department of Physics and Astronomy}\\
+\emph{NSERC Undergraduate Student Research Award}\\
+Condensed matter theory: studies of the generalized dipolar spin ice model of dysprosium titanate via cumulant expansion methods implemented within Monte Carlo simulations, and crystal field calculations with Stevens operator methods.  This project won awards at departmental, faculty-wide, and national conferences.\\
+
+\years{5/2011-4/2012}\textbf{Supervisors: Professor Moshe Szyf \& Professor Walter Reisner}\\ 
+\emph{\textbf{McGill University}, Department of Physics}\\
+\emph{\textbf{McGill University}, Department of Pharmacology \& Therapeutics}\\
+\emph{NSERC Undergraduate Student Research Award, McGill Honours Research Thesis}\\
+Biophysics: single molecule DNA methylation mapping in nanochannels. Experienced with \textsc{Matlab}, protein purification and binding assays, and Total Internal Reflection Fluorescence (TIRF) microscopy. This project was nominated to the Canadian Undergraduate Physics Conference.\\
+
+\years{5/2010-8/2010}\textbf{Supervisor: Professor Jürgen Sygusch}\\ 
+\emph{\textbf{Université de Montréal}, Department of Biochemistry}\\
+\emph{NSERC Undergraduate Student Research Award}\\
+Bioinformatics: virtual high throughput screening of potential \emph{Magnaporthe grisea} aldolase II pesticides, 3\textsc{d} conformational modeling of various aldolases. Experienced with AutoDock, Schrodinger Glide, PyMOL, and Python.\\
+
+\years{9/2009-3/2010}\textbf{Supervisor: Professor Moshe Szyf}\\ 
+\emph{\textbf{McGill University}, Department of Pharmacology \& Therapeutics}\\
+Epigenetics: measuring DNA methylation in the promoters of microRNAs triggered during cancer metastasis. Experienced with fundamental techniques in molecular biology such as cloning, PCR, cell culture, sequencing, and cell transformation.\\
+
+\years{6/2008-8/2008}\textbf{Supervisor: Professor Alain Stintzi}\\
+\emph{\textbf{University of Ottawa}, Department of Biochemistry, Microbiology \& Immunology}\\
+Microbiology: investigated the bactericidal effects of protamine on \emph{Campylobacter jejuni}.
+\newpage
+\years{9/2005-12/2005}\textbf{Supervisors: Professor Adrian Unc \& Professor Syed Sattar}\\
+\emph{\textbf{University of Ottawa}, Centre for Research on Environmental Microbiology}\\
+Microbiology: bacterial analysis of bottled water and the antibacterial properties of sucralose. Awarded first prize at the Ottawa Regional Science Fair and Bronze Medal in the Biotechnology category at the 2006 Canada Wide Science Fair.\\
+
+\section*{Teaching Experience}
+\years{Winter 2013}Teaching Assistant: \textsc{Math} 270, Applied Linear Algebra (Professor Adam Oberman)\\
+\years{Winter 2012}Teaching Assistant: \textsc{Math} 249, Honours Complex Variables (Professor Robert Seiringer)\\
+\years{Fall 2011} Supervised a graduate student in the Szyf Lab at McGill\\
+
+\section*{Oral Presentations}
+\years{2013}Faculty of Science research opportunities presentation, \emph{McGill University}\\
+\years{2012}Department of Mathematics Honours Project Oral Component, \emph{McGill University}\\
+\years{2012}Department of Physics Undergraduate Student Symposium, \emph{McGill University}\\
+\years{2012}Canadian Undergraduate Physics Conference, \emph{University of British Columbia}\\
+\years{2012}Department of Physics Honours Research Thesis Defense, \emph{McGill University}\\
+
+\section*{IT \& Programming Skills}
+Systems languages: C, C++\\
+Scripting languages: Python, Shell Script\\
+Data analysis: Mathematica, \textsc{Matlab}\\
+Digital typesetting: \LaTeX, \XeTeX \\
+
+\section*{Publications}
+\years{2013}J. Sygusch and J. Altosaar. The Resonant Recognition Model: long-range protein interaction via transition dipole couplings. \emph{McGill Honours Research Project, manuscript in preparation for submission}.\\
+\years{2013}T. Lin, J. Altosaar, P. Henelius, and M. J. P. Gingras. Numerical study of perturbations in dipolar spin ice. \emph{Submitted to The American Physical Society March Meeting 2013, Log \# \textsc{mar}13-2012-002764}.\\
+\years{2012}J. Altosaar, T. Lin, and M. J. P. Gingras. Cumulants to crystal fields: a case for stuffing of the B-site in dysprosium titanate. \emph{Technical Report, Department of Physics and Astronomy, University of Waterloo}.\\
+\years{2012}J. Altosaar. Detecting methylation of single molecules of DNA using a methyl binding domain GFP fusion protein. \emph{McGill Honours Research Thesis}.
+
+\newpage
+\section*{Conferences and Workshops}
+\years{2013}$\ddag$WEP Poster Competition, \emph{King Abdullah University of Science and Technology}\\
+\years{2013}Biological Small Angle X-Ray Scattering Workshop, \emph{University of Montreal}\\
+\years{2012}\Cross Canadian Undergraduate Physics Conference, \emph{University of British Columbia}\\
+\emph{First Prize for best poster}\\
+\years{2012}\Cross Faculty of Science Undergraduate Research Conference, \emph{McGill University}\\
+\emph{Second Prize: induction to Sigma Xi Society}\\
+\years{2012}\Cross Department of Physics Poster Conference, \emph{McGill University}\\
+\emph{Third Prize: nomination and award for Canadian Undergraduate Physics Conference}\\
+\years{2012}Highly Frustrated Magnetism, \emph{McMaster University}\\
+\years{2012}Friday Condensed Matter Seminars, \emph{Perimeter Institute for Theoretical Physics}\\
+\years{2012}Southwest Ontario Condensed Matter Symposium, \emph{Perimeter Institute}\\
+\years{2012}\textasteriskcentered Groupe de Recherche Axé sur la Structure des Protéines Symposium, \emph{McGill University}\\
+\years{2011}\textasteriskcentered Canadian Undergraduate Physics Conference, \emph{University of Saskatchewan}\\
+\years{2011}\textasteriskcentered Department of Physics Poster Conference, \emph{McGill University}\\
+\emph{Hon. Mention: nomination and award for Canadian Undergraduate Physics Conference}\\
+\years{2011}\textasteriskcentered Department of Engineering Poster Conference, \emph{McGill University}\\
+\years{2011}NSERC CREATE Integrated Sensor Systems, \emph{McGill University}\\
+\years{2010}Gordon Research Conference: Enzymes \& Metabolic Pathways, \emph{New Hampshire}\\
+$\ddag$\emph{Poster: Protein interaction through transition dipole couplings: Resonant Recognition}\\
+\Cross \emph{Poster: How stuffing leads to novel behaviour in spin ice}\\
+\textasteriskcentered  \emph{Poster: DNA methylation mapping in nanochannels} 
+
+\section*{Professional Associations}
+\emph{Member}, Canadian Association of Physicists\\
+\emph{Member}, Institute of Physics\\
+\emph{Member}, Sigma Xi Scientific Society
+
+\section*{Activities \& Interests}
+\years{2009-present}Meditation (Enpuku-ji Zen Center, Abbess: Zengetsū Myōkyō)\\ 
+\years{1996-present}Classical and jazz piano\\
+\years{2012}University of Waterloo Choir (Director: Professor Gerard Yun)\\
+\years{2012}University of Waterloo Intramural Beach Volleyball (placed second out of 54 teams)\\
+\years{2011}Milton Park Recreation Association Beach Volleyball\\
+\years{2010}Mentor with McGill University Mentorship Program for First-Year Students\\
+\years{2010}Montreal Estonian Society Kindergarten Teacher\\
+\years{2009}McGill Choral Society (Director: Mary-Jane Puiu)
+
+\section*{Languages}
+\emph{English} (native speaker)\\
+\emph{Estonian} (professional proficiency)\\
+\emph{French} (professional proficiency)
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\end{document}

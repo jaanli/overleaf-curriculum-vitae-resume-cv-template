@@ -1,0 +1,105 @@
+% !TEX root = ../Altosaar-CV.tex
+
+% DOCUMENT LAYOUT
+\usepackage{geometry}
+\geometry{letterpaper, textwidth=6.5in, textheight=9.5in, marginparsep=20pt, marginparwidth=2in}
+\setlength\parindent{0in}
+
+\oddsidemargin .5in
+\evensidemargin .5in
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{ %
+\fancyhf{} % remove everything
+\renewcommand{\headrulewidth}{0pt}} % remove lines as well
+\pagestyle{plain}
+\lfoot{\hspace{2.71in}\thepage}
+
+% FONTS
+\usepackage{fontspec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+% https://www.overleaf.com/learn/latex/Questions/I_have_a_custom_font_I%27d_like_to_load_to_my_document._How_can_I_do_this%3F
+% \setmainfont[ExternalLocation=fonts/]{WhitneyHTF}[ 
+% Extension = .otf,
+% UprightFont = *-Light,
+% SmallCapsFont = *-LightSC,
+% BoldItalicFont = *-MediumItalic,
+% BoldItalicFeatures={SmallCapsFont= *-MediumSC},
+% BoldFont = *-Medium,
+% BoldFeatures={SmallCapsFont= *-LightSC},
+% ]
+
+\setmainfont[ExternalLocation=fonts/berkeley-mono/OTF/]{BerkeleyMono}[
+Extension = .otf,
+UprightFont = *-Regular,
+ItalicFont = *-Italic,
+BoldFont = *-Bold,
+BoldItalicFont = *-BoldItalic,
+]
+
+% \newfontfamily\atfamily{WhitneyHTF}
+\usepackage{marvosym} % OUTDATED - switch to fontawesome
+\usepackage{fontawesome5}
+%whitney HTF or hoefler text
+%\newfontfamily\times[Ligatures=TeX]{Times New Roman}
+%sc specs use \sffamily to activate
+% \setsansfont{Whitney HTF Medium SC}
+
+% TABLE ALIGNMENT
+\usepackage{etoolbox}
+\usepackage[group-separator={,}]{siunitx}
+%\robustify\bfseries
+\sisetup{detect-weight=true, detect-shape=true, detect-mode=true,
+table-format=5.1, table-number-alignment=center}
+
+% ---- CUSTOM COMMANDS
+%\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+%\newcommand{\amper{}}{\chardef\amper="E0BD } % was ""E0BD"
+\newcommand{\years}[1]{\marginnote{\normalsize #1}}
+\renewcommand*{\raggedrightmarginnote}{}
+\setlength{\marginparsep}{14pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+% \sectionfont{\mdseries\upshape\Large}
+\sectionfont{\sffamily\scshape\large}
+\subsectionfont{\mdseries\scshape\normalsize}
+% \subsectionfont{\mdseries\scshape\normalsize}
+\subsubsectionfont{\mdseries\upshape\large}
+
+\usepackage[compact]{titlesec}
+% \titleformat{\section}{\normalfont\sffamily\large}{}{1em}{}
+\titleformat{\section}{\Large\scshape\bfseries}{}{0cm}{}[]%\titlerule]
+\titleformat{\subsection}[runin]{\bfseries\scshape}{}{0cm}{}[ --]
+\titleformat{\subsubsection}{\large\bfseries\scshape}{}{0cm}{}
+
+%\titlespacing*{\section}{0pt}{12pt}{3pt}
+\titlespacing*{\section}{0pt}{10pt}{1pt}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR \usepackage[dvipdfm, ] was removed
+\usepackage[bookmarks, colorlinks, breaklinks,
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Jaan Lı 李 PhD - Curriculum Vitæ - https://jaan.io - https://jaan.li - jaan.li@jaan.li},
+	pdfauthor={Jaan Lı 李 PhD - https://jaan.io - https://jaan.li - jaan.li@jaan.li}
+]{hyperref}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue}
+
+% VARIABLES
+\newcommand{\yearspace}{\hspace*{24pt}}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../Altosaar-CV"
+%%% End:

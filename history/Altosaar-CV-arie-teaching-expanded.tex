@@ -1,0 +1,315 @@
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, letterpaper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{letterpaper, textwidth=6.5in, textheight=9.5in, marginparsep=20pt, marginparwidth=2in}
+\setlength\parindent{0in}
+
+\oddsidemargin .5in
+\evensidemargin .5in
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{ %
+\fancyhf{} % remove everything
+\renewcommand{\headrulewidth}{0pt}} % remove lines as well
+\pagestyle{plain}
+\lfoot{\hspace{2.71in}\thepage}
+
+% JAVASCRIPT  (app.launchURL("#1",true);)
+ 
+%\newcommand{\link}[1]{\JS{% app.launchURL("#1",true);}} 
+
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text,Ligatures=Common, Scale=1}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Hoefler Text Roman}
+%\setromanfont{Whitney HTF Light}
+%\setmainfont{Whitney HTF}
+\setmainfont[
+ BoldFont={Whitney HTF Medium}, 
+ ItalicFont={Whitney HTF Light Italic},
+ BoldItalicFont={Whitney HTF Medium Italic}
+ ]{Whitney HTF}
+%\newfontfamily\atfamily{Whitney HTF}
+\usepackage{marvosym} % OUTDATED - switch to fontawesome
+\usepackage{fontawesome}
+%whitney HTF or hoefler text
+%\newfontfamily\times[Ligatures=TeX]{Times New Roman}
+
+%sc specs use \sffamily to activate
+\setsansfont{Whitney HTF Medium SC} 
+
+% ---- CUSTOM COMMANDS
+%\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+%\newcommand{\amper{}}{\chardef\amper="E0BD } % was ""E0BD"
+\newcommand{\years}[1]{\marginnote{\normalsize #1}}
+\renewcommand*{\raggedrightmarginnote}{}
+\setlength{\marginparsep}{14pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+%\sectionfont{\mdseries\upshape\Large}
+\sectionfont{\sffamily\large}
+%\subsectionfont{\mdseries\scshape\normalsize} 
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+\usepackage[compact]{titlesec}
+\titleformat{\section}{\normalfont\sffamily\large}{}{1em}{}
+
+%\titlespacing*{\section}{0pt}{12pt}{3pt}
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR \usepackage[dvipdfm, ] was removed
+\usepackage[bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Jaan Altosaar - Curriculum Vitæ},
+	pdfauthor={Jaan Altosaar, https://jaan.io}
+]{hyperref}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\Huge \sffamily jaan altosaar}\\[0.3cm]
+
+\begin{minipage}[ht]{0.6\textwidth}
+{ Department of Physics}, Princeton University\\
+Office: 307 Jadwin Hall\\
+Princeton, New Jersey 08540\\
+\end{minipage}
+\begin{minipage}[ht]{0.48\textwidth}
+\faPhone \hspace{3 mm} \href{tel:16092853059}{+1 (609) 285-3059}\\
+\hspace*{-0.3mm}\textsc{\faEnvelope} \hspace*{1.8 mm} \href{mailto:altosaar@princeton.edu}{altosaar@princeton.edu}\\
+\faGlobe \hspace{3 mm} \href{https://jaan.io}{https://jaan.io}\\ 
+\end{minipage}\\
+
+{\sffamily born:}  March 8, 1992 --- Ottawa, Canada\\
+{\sffamily languages:} English (native), Estonian (native), French (professional proficiency)\\%---Ottawa, Canada Citizenship: Canadian and Estonian
+\section*{areas of specialization}
+Machine Learning • Theoretical Physics • Biophysics • Functional Analysis • Algebra\\
+
+\section*{education}
+\years{2013-\hspace*{25pt}}\textbf{Ph.D., Physics}\\ %Advisor: Professor \href{http://icouzin.princeton.edu/}{Iain Couzin}\\
+\emph{Princeton University}, Princeton, New Jersey, United States of America\\
+\years{2009-2013}\textbf{\textsc{B.Sc.} First Class Honours in Mathematics and Physics}\\
+\emph{McGill University}, Montreal, Quebec, Canada\\
+\emph{Top 10\% cumulative GPA, Dean's Honour List, Dean's Multidisciplinary Undergraduate Research List}\\
+\years{2007-2009}\textbf{Ontario Secondary School Diploma}\\
+\emph{Hillcrest High School}, Ottawa, Ontario, Canada. Honours, Co-President of 1200-student body\\
+\years{2006-2007}\textbf{Higher School Certificate Years 9 \& 10}\\
+\emph{Randwick Boys High School}, Sydney, New South Wales, Australia\\
+
+\section*{honors \& awards}
+\years{2014}\href{https://www.google-melange.com/gsoc/project/details/google/gsoc2014/jaanaltosaar/5741031244955648}{Google Summer of Code}: Topic modeling LaTeX on the \href{http://arxiv.org/}{arXiv} (Princeton, \$6,000)\\
+\years{2014-2017}\href{http://www.nserc-crsng.gc.ca/students-etudiants/pg-cs/bellandpostgrad-belletsuperieures_eng.asp}{NSERC Doctoral Postgraduate Scholarship}: ranked 3rd of 204 (Princeton, \$63,000)\\
+\years{2013}\href{http://www.nserc-crsng.gc.ca/NSERC-CRSNG/FundingDecisions-DecisionsFinancement/2013/JuliePayette_eng.asp}{Julie Payette NSERC Research Scholarship}: awarded to the top 24 applicants in the Canada-wide Postgraduate Scholarships M competition (Ottawa, \$25,000)\\
+\years{2013-2016}\href{http://www.scholarships-bourses.gc.ca/scholarships-bourses/can/csp_uk-pbc_uk.aspx?lang=eng}{Commonwealth Scholarship}, DPhil studies at University of Oxford (\emph{Declined}, £31,875/year)\\
+\years{2013}\href{http://www.mcgill.ca/science/student/moyse/}{The Faculty of Science Moyse Travelling Scholarship}, McGill University (Montreal, \$8,800)\\
+\years{2013}\href{http://www.mcgill.ca/gps/funding/students-postdocs/students/mackenzie#delta}{Delta Upsilon Graduate Scholarship}, McGill University (Montreal, \$5,000)\\
+\years{2013}Full funding to attend the \href{http://www.kaust.edu.sa/academics/wep/}{King Abdullah University of Science and Technology WEP Conference}: international competition, 15 recipients (Jeddah, \textsc{\$}2000)\\
+\years{2012}First Prize for best poster, \href{http://cupc.ca/}{Canadian Undergraduate Physics Conference} (Vancouver)\\
+\years{2012}Elected to \href{http://www.sigmaxi.org/}{Sigma Xi Society} (Montreal)\\
+\years{2012}Second Prize, \href{http://www.mcgill.ca/science/research/ours/urc/2012}{McGill Faculty-wide Undergraduate Research Conference} (Montreal, \$150)\\
+\years{2012}Third Prize, McGill Department of Physics Poster Conference (Montreal)\\
+\years{2012}\href{http://www.nserc-crsng.gc.ca/students-etudiants/ug-pc/usra-brpc_eng.asp}{NSERC Undergraduate Student Research Award} (Waterloo, \textsc{\$}8,400) \\
+\years{2011}McGill Award for Canadian Undergraduate Physics Conference (Saskatoon, \textsc{\$}1,000)\\
+\years{2011}NSERC Undergraduate Student Research Award (Montreal, \textsc{\$}7,600) \\
+\years{2010}\href{http://estonianfoundation.ca/scholarships}{Estonian Foundation of Canada Scholarship} (Toronto, \textsc{\$}2,000)\\
+\years{2010}NSERC Undergraduate Student Research Award (Montreal, \textsc{\$}5,500)\\
+\years{2009}Annette S. Hill McGill Scholarship and Bursary (Montreal, \textsc{\$}5,000)\\
+\years{2008}Harry Elton Memorial Award (Shanghai, China, \textsc{\$}2,000)\\
+%\years{2006}Bronze Medal in Biotechnology, Canada Wide Science Fair (Saguenay, \textsc{\$}300)\\
+
+\section*{work experience}
+\years{11/2013-\hspace*{37pt}}\textbf{Founder, \href{http://usefulscience.org}{Useful Science}} (\href{http://usefulscience.org}{http://usefulscience.org})\\
+Led team of 60 through concept and launch of a non-profit science outreach website (400k+ hits, 10k+ subscribers). Featured on mainstream tech websites such as Lifehacker and Boing Boing, and syndicated by the Washington Post.\\
+
+\years{10/2013-\hspace*{37pt}}\textbf{Science Media Consultant, \href{http://thwacke.com}{Thwacke}}\\
+Consulting for game developers on how to create realistic game elements based on science. Literature reviews, communicating science to developers and screenwriters.\\
+
+\years{5/2013-8/2013}\textbf{iOS \& Android User Interface Designer, Ottawa Hospital Research Institute}\\
+Led user interface design and testing; completed the design of Canada's national vaccinations tracking mobile app and backend released in 2014 (\href{http://www.immunize.ca/en/app.aspx}{demo}).\\ %link to press on cbc / elsewher?
+
+\section*{research experience}
+\noindent
+\years{4/2014-\hspace*{37pt}}\textbf{Advisor: \href{http://www.cs.princeton.edu/~blei/}{David Blei}}\\
+\emph{\textbf{Columbia University}, Departments of Computer Science and Statistics}\\
+\emph{\href{https://www.google-melange.com/gsoc/project/details/google/gsoc2014/jaanaltosaar/5741031244955648}{Google Summer of Code} award}\\
+Topic modeling \LaTeX~equations on the \href{http://arxiv.org/}{arXiv}: applying machine learning techniques to the arXiv corpus to analyze patterns in science and improve recommendation systems.\\
+%link to d3.js blogpost on jaan.io
+
+%link to fish project & post on t-sne on rainforest in d3.js
+\years{9/2013-4/2014}\textbf{Advisor: \href{http://icouzin.princeton.edu/}{Iain Couzin}}\\
+\emph{\textbf{Princeton University}, Departments of Physics, Ecology and Evolutionary Biology}\\
+\emph{Julie Payette NSERC Research Scholarship}\\
+Applied stochastic neighbor embedding techniques to analyze rainforest health via audio recordings, and realtime computer vision techniques to study collective behavior. Completed 3-week field study in Costa Rica to collect rainforest audio.\\
+
+%add blurb instead on how i developed the matlab code for rrm and it's being used in research labs.
+\years{9/2012-7/2013}\textbf{Advisors: \href{http://esilrch1.esi.umontreal.ca/~syguschj/home.html}{Jürgen Sygusch} \& \href{http://www.medicine.mcgill.ca/physio/khadralab/}{Anmar Khadra}}\\
+\emph{\textbf{Université de Montréal}, Department of Biochemistry}\\
+\emph{\textbf{McGill University}, Department of Mathematics and Statistics, Honours Research Project}\\
+Theoretical biophysics: developed a physical foundation for the Resonant Recognition Model as a viable theory of biomolecular recognition via transition dipole coupling. This project received full funding for the KAUST 2013 Undergraduate Poster Competition.\\  
+
+\years{5/2012-8/2012}\textbf{Advisor: \href{https://uwaterloo.ca/physics-astronomy/people-profiles/michel-gingras}{Michel Gingras}}\\ 
+\emph{\textbf{University of Waterloo}, Department of Physics and Astronomy}\\
+\emph{NSERC Undergraduate Student Research Award}\\
+Condensed matter theory: studies of the generalized dipolar spin ice model of dysprosium titanate via \href{https://github.com/altosaar/cumulantexpander}{cumulant expansion methods} implemented within Monte Carlo simulations, and crystal field calculations with Stevens operator methods.  This project won awards at departmental, faculty-wide, and national conferences.\newpage
+% add sebastian alvarado to advisors page here!
+\years{5/2011-4/2012}\textbf{Advisors: \href{http://szyf-lab.com/}{Moshe Szyf} \& \href{http://www.physics.mcgill.ca/~reisner/}{Walter Reisner}}\\ 
+\emph{\textbf{McGill University}, Department of Physics}\\
+\emph{\textbf{McGill University}, Department of Pharmacology \& Therapeutics}\\
+\emph{NSERC Undergraduate Student Research Award, McGill Honours Research Thesis}\\
+Biophysics: single molecule DNA methylation mapping in nanochannels. Experienced with \textsc{Matlab}, protein purification and binding assays, and TIRF microscopy.\\
+
+\years{5/2010-8/2010}\textbf{Advisor: \href{http://esilrch1.esi.umontreal.ca/~syguschj/home.html}{Jürgen Sygusch}}\\ 
+\emph{\textbf{Université de Montréal}, Department of Biochemistry}\\
+\emph{NSERC Undergraduate Student Research Award}\\
+Bioinformatics: virtual high throughput screening of potential \emph{Magnaporthe grisea} aldolase II pesticides through simulation of molecular docking. 3D conformational modeling of various aldolases.\\
+
+% Experienced with AutoDock, Schrodinger Glide, PyMOL, Shell scripting, and Python.
+
+%\years{9/2009-3/2010}\textbf{Advisor: \href{http://szyf-lab.com}{Moshe Szyf}}\\ 
+%\emph{\textbf{McGill University}, Department of Pharmacology \& Therapeutics}\\
+%Epigenetics: quantifying changes in microRNAs triggered during cancer metastasis.
+%Epigenetics: measuring DNA methylation in the promoters of microRNAs triggered during cancer metastasis. %Experienced with fundamental techniques in molecular biology such as cloning, PCR, cell culture, sequencing, and cell %transformation.
+
+%\years{6/2008-8/2008}\textbf{Advisor: \href{http://www.med.uottawa.ca/bmi/eng/stintzi.html}{Alain Stintzi}}\\
+%\emph{\textbf{University of Ottawa}, Department of Biochemistry, Microbiology \& Immunology}\\
+%Microbiology: investigated the bactericidal effects of protamine on \emph{Campylobacter jejuni}.
+%\newpage
+%\years{9/2005-12/2005}\textbf{Advisors: Adrian Unc \& Syed Sattar}\\
+%\emph{\textbf{University of Ottawa}, Centre for Research on Environmental Microbiology}\\
+%Microbiology: bacterial analysis of bottled water and the antibacterial properties of sucralose. Awarded first prize at the %Ottawa Regional Science Fair and Bronze Medal in the Biotechnology category at the 2006 Canada Wide Science Fair.\\
+
+
+\section*{teaching experience}
+\years{Fall 2014}\textbf{Instructor, Wilson College, Princeton University}\\
+Teaching meditation to undergraduates in hour-long sessions each week. \\
+\years{Spring 2014}\textbf{Instructor, Princeton Splash}\\
+Taught four classes to local high school students. Excellent ratings from students (teaching quality 4.38/5 from anonymous survey of students). Personal follow-ups with students. From an anonymous student survey response: "Very good class, info sharing among students and teacher, link [\emph{sic}] to the notes online. Offered extra help through e-mail."\\
+\years{Winter 2013}\textbf{Teaching Assistant, McGill University}\\
+Designed and gave weekly tutorial lectures for this second-year university math course (Math 270, Applied Linear Algebra). Advised by Professor \href{http://scholar.google.com/citations?user=LPAZlL8AAAAJ&hl=en}{Adam Oberman}. Graded problem sets, held weekly office hours to help students with the material one-on-one. \\
+\years{Winter 2012}\textbf{Teaching Assistant, McGill University}\\
+Gave tutorial lectures for this advanced second-year university math course (Math 249, Honours Complex Variables). Advised by Professor \href{http://www.math.mcgill.ca/rseiring/Robert_Seiringer/Robert_Seiringers_Homepage.html}{Robert Seiringer}. Graded problem sets, held one-on-one sessions with students to help with material.\\
+\years{Fall 2011} \textbf{Teacher, \href{http://www.mtlmes.ca/}{Montreal Estonian Society} Kindergarten}\\
+Led informal singing, music, and arts-and-crafts sessions with 3-6 year-olds.\\
+\years{Fall 2011} \textbf{Supervised a graduate student in the Szyf Lab at McGill on an experimental project}\\
+\years{2011-2012} \textbf{Mentor, McGill University \href{http://www.mcgill.ca/internationalstudents/pre-arrival/buddy-program}{Buddy Program}}\\
+
+
+\section*{oral presentations}
+\years{2014}Experimental project final oral presentation, \emph{Princeton University}\\
+\years{2013}Montreal Startup Club presentation on the Immunize Canada app, \emph{Rho Canada Ventures}\\
+\years{2013}Faculty of Science presentation on research opportunities, \emph{McGill University}\\
+\years{2012}Department of Mathematics Honours Project Oral Component, \emph{McGill University}\\
+\years{2012}Department of Physics Undergraduate Student Symposium, \emph{McGill University}\\
+\years{2012}Canadian Undergraduate Physics Conference, \emph{University of British Columbia}\\
+\years{2012}Department of Physics Honours Research Thesis Defense, \emph{McGill University}\\
+
+\section*{programming skills}
+Version control systems: Git\\
+Systems administration: LE(A)MP stacks on Ubuntu \& Debian\\
+Systems languages: C\\
+Scripting languages: Python, Shell Script\\
+Web development: D3.js, HTML5, CSS, Flask, MySQL\\ 
+Data analysis: Mathematica, Matlab\\
+%Digital typesetting: \LaTeX, \XeTeX 
+\section*{publications}
+%\years{2014}P. Henelius, T. Lin, M. Enjalran, Z. Hao, F. Flicker, T. Yavors’kii, J. Altosaar, and M. Gingras. \emph{In preparation.}\\
+\years{2013}J. Sygusch and J. Altosaar. The Resonant Recognition Model: long-range protein interaction via transition dipole couplings. \emph{McGill Honours Research Project}.\\
+\years{2013}T. Lin, J. Altosaar, P. Henelius, and M. J. P. Gingras. Numerical study of perturbations in dipolar spin ice. \emph{The American Physical Society March Meeting 2013}.\\%, Log \# \textsc{mar}13-2012-002764}. \newpage
+%\years{2012}J. Altosaar, T. Lin, and M. J. P. Gingras. Cumulants to crystal fields: a case for stuffing of the B-site in dysprosium titanate. \emph{Technical Report, Department of Physics and Astronomy, University of Waterloo}.\\
+\years{2012}J. Altosaar. Detecting methylation of single molecules of DNA using a methyl binding domain GFP fusion protein. \emph{McGill Honours Research Thesis}.
+
+\section*{conferences, workshops \& posters} % add hyperlinks to some of these!
+\years{2015}\href{http://www.fields.utoronto.ca/programs/scientific/14-15/bigdata/}{Workshop on Big Data and Statistical Machine Learning}, \emph{University of Toronto}\\
+\years{2014}\href{http://www.knowledgelab.org/events/detail/metaknowledge_research_network_summer_retreat/}{Metaknowledge Research Network summer retreat}, \emph{Monterey, CA}\\	
+\years{2014}\href{http://startupschool.org/}{Y Combinator Startup School}, \emph{New York City}\\
+\years{2014}\href{http://comscicon.com/}{ComSciCon}: Communicating Science, \emph{Harvard University: ranked top 50 of 870 applicants}\\
+\years{2013}Reinforcement Learning and Decision Making, \emph{Princeton University}\\
+\years{2013}John von Neumann Symposium: Towards Quantitative Biology, \emph{Rockefeller University}\\
+\years{2013}HackMIT; developed \href{http://hackmit.challengepost.com/submissions/17972-couchometer}{Android app} to track sitting, \emph{Massachusetts Institute of Technology}\\
+\years{2013}\textsuperscript{3}WEP Poster Competition, \emph{King Abdullah University of Science and Technology}\\
+%\years{2013}Biological Small Angle X-Ray Scattering Workshop, \emph{University of Montreal}\\
+\years{2012}\textsuperscript{2}Canadian Undergraduate Physics Conference, \emph{University of British Columbia}\\
+\emph{First Prize for best poster}\\
+\years{2012}\textsuperscript{2}Faculty of Science Undergraduate Research Conference, \emph{McGill University}\\
+\emph{Second Prize: induction to Sigma Xi Society}\\
+\years{2012}\textsuperscript{2}Department of Physics Poster Conference, \emph{McGill University}\\
+\emph{Third Prize: nomination and award for Canadian Undergraduate Physics Conference}\\
+\years{2012}Highly Frustrated Magnetism, \emph{McMaster University}\\
+\years{2012}Friday Condensed Matter Seminars, \emph{Perimeter Institute for Theoretical Physics}\\
+\years{2012}Southwest Ontario Condensed Matter Symposium, \emph{Perimeter Institute}\\
+\years{2012}\textsuperscript{1}Groupe de Recherche Axé sur la Structure des Protéines Symposium, \emph{McGill University}\\
+\years{2011}\textsuperscript{1}Canadian Undergraduate Physics Conference, \emph{University of Saskatchewan}\\
+\years{2011}\textsuperscript{1}Department of Physics Poster Conference, \emph{McGill University}\\
+\emph{Hon. Mention: nomination and award for Canadian Undergraduate Physics Conference}\\
+\years{2011}\textsuperscript{1}Department of Engineering Poster Conference, \emph{McGill University}\\
+%\years{2011}NSERC CREATE Integrated Sensor Systems, \emph{McGill University}\\
+\years{2010}Gordon Research Conference: Enzymes \& Metabolic Pathways, \emph{New Hampshire}\\
+\textsuperscript{3}\emph{Poster: Protein interaction through transition dipole couplings: Resonant Recognition}\\
+\textsuperscript{2}\emph{Poster: How stuffing leads to novel behaviour in spin ice}\\
+\textsuperscript{1}\emph{Poster: DNA methylation mapping in nanochannels} 
+
+\section*{science outreach}
+\years{2014}Hopewell Elementary School science fair judge\\
+\years{2014}Princeton Physics Open House Committee
+
+\section*{professional associations}
+\emph{Member}: Association for Computing Machinery, Institute of Physics, Sigma Xi Scientific Society (nominated), American Association for the Advancement of Science (nominated), Institute of Mathematical Statistics
+
+\section*{activities \& interests}
+\years{2014-2015}\href{http://www.princeton.edu/wilsoncollege/people/rgss/BiosAY14-15/jaan-altosaar.xml}{Resident Graduate Student}, Wilson College, Princeton University\\
+\years{2009-\hspace*{24pt}}Meditation (Enpuku-ji Zen Center, Abbess: Zengetsu Myokyo)\\ %remove myokyo ref? then again it shows im serious about it.
+\years{1996-\hspace*{24pt}}Classical and jazz piano\\
+\years{2012}University of Waterloo Choir (Director: Professor Gerard Yun)\\
+\years{2012}University of Waterloo Intramural Beach Volleyball (placed second out of 54 teams)\\
+\years{2011}Milton Park Recreation Association Beach Volleyball\\
+%\years{2010}Mentor with McGill University Mentorship Program for First-Year Students\\
+%\years{2010}Montreal Estonian Society Kindergarten Teacher\\
+\years{2009}McGill Choral Society (Director: Mary-Jane Puiu)
+
+\section*{selected press}
+\years{2014}\href{http://boingboing.net/2014/01/22/useful-science-accessible-by.html}{Boing Boing}, "Useful Science, accessible by all"\\
+\years{2014}\href{http://lifehacker.com/excel-shortcuts-article-summaries-and-web-notes-1506962447}{Lifehacker}, "Excel shortcuts, article summaries, and web notes"\\
+\years{2014}\href{http://blog.fitbit.com/7-science-backed-numbers-to-improve-your-life/}{Fitbit} corporate blog, "7 science-backed numbers to improve your life"\\
+\years{2014}\href{http://www.nzherald.co.nz/technology/news/article.cfm?c_id=5&objectid=11256302}{New Zealand Herald}, "10 top sites to visit this weekend"\\
+\years{2014}\href{http://awesci.com/chat-jaan-altosaar-useful-science/}{AweSci}, "A chat with Jaan Altosaar from Useful Science"\\
+\years{2014}\href{http://computerworld.nl/consumerization/81240-het-leven-van-een-it-er-is-dodelijk}{Computerworld.nl}, "Het leven van een IT'er is dodelijk!"\\
+\years{2014}\href{http://publications.mcgill.ca/reporter/2014/02/simplifying-science-without-dumbing-it-down/}{McGill Reporter}, "Simplifying science without dumbing it down"\\
+\years{2014}\href{http://www.itworld.com/mobile-wireless/402682/useful-science-headlines-apply-your-weird-little-computer-life}{IT World}, "Useful Science headlines that apply to your weird little computer life"\\
+\years{2014}\href{http://mcgilltribune.com/sci-tech/usefulscience-bridges-communication-gap-in-research/}{McGill Tribune}, "Useful Science bridges communication gap in research"\\
+\years{2014}\href{http://publications.mcgill.ca/mcgillnews/2014/05/28/better-living-through-science/}{McGill News}, Alumni Magazine, "Better living through science"\\
+\years{2014}\href{http://msurjblog.com/2014/01/20/scientifically-proven-to-improve-your-life-an-interview-with-useful-science/}{MSURJ}, "Scientifically proven* to improve your life -- an interview with Useful Science"\\
+\years{2014}\href{http://www.betakit.com/mcgill-grad-launches-curated-list-of-useful-science-articles/}{Betakit}, "McGill grad launches curated list of science articles"\\
+\years{2014}\href{http://www.gazette.uottawa.ca/en/2014/03/useful-science/}{uOttawa Gazette}, "Useful Science... in 5 seconds or less"\\
+\years{2014}Art of Change \href{https://itunes.apple.com/us/podcast/the-art-of-change/id804360406}{podcast}, "The secret to making your ideas a reality"\\
+\years{2014}CBC Radio, Spark \href{http://www.cbc.ca/spark/blog/2014/02/23/sciencescape/}{episode} on Sciencescape\\
+\years{2013}\href{http://bullandbear.musonline.com/2013/10/undergraduate-innovation-campus-wide-opportunity/}{The Bull \& Bear}, "Undergraduate Innovation – A Campus-wide Opportunity"\\
+\years{2013}\href{http://www.mcgill.ca/science/research/ours/testimonials}{McGill Office for Undergraduate Research in Science}\\
+
+%\section*{Languages}
+%\emph{English} (native speaker)\\
+%\emph{Estonian} (professional proficiency)\\
+%\emph{French} (professional proficiency)
+\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\end{document}
